@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  hello_world:
+    build:
+      context: .
+      dockerfile: Dockerfile-dev
+    volumes:
+     - ./src:/src
+    ports:
+     - "80:80"
