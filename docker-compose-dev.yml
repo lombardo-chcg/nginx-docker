@@ -9,8 +9,6 @@ services:
      - ./src:/src
     ports:
      - "80:80"
-    depends_on:
-     - demo-scalatra-api
     environment:
      - API_HOST=demo-scalatra-api
     links:

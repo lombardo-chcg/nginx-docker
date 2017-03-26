@@ -5,3 +5,11 @@ services:
     build: .
     ports:
      - "80:80"
+    environment:
+     - API_HOST=demo-scalatra-api
+    links:
+     - demo-scalatra-api
+  demo-scalatra-api:
+    image: lombardo/demo-scalatra-api:latest
+    ports:
+     - "8080:8080"
